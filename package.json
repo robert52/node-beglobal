@@ -1,0 +1,25 @@
+{
+  "name": "node-beglobal",
+  "description": "A wrapper for the BeGlobal API",
+  "keywords": [
+    "beglobal",
+    "api",
+    "translation"
+  ],
+  "version": "0.0.1",
+  "homepage": "",
+  "repository": "git@github.com:robert52/node-beglobal.git",
+  "author": {
+    "name": "Robert Onodi",
+    "email": "robert.onodi89@gmail.com"
+  },
+  "main": "./lib/beglobal.js",
+  "dependencies": {},
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "licenses": [
+    "type": "MIT",
+    "url": "http://github.com/robert52/node-beglobal/raw/master/LICENSE"
+  ]
+}
