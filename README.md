@@ -1,10 +1,45 @@
 node-beglobal
 =============
 
-A wrapper for BeGlobal API
+A node.js wrapper for [BeGlobal API](https://www.beglobal.com/)
 
+## Installation
 
-##License
+You can install it using NPM (Node Package Manager)
+```
+npm install node-beglobal
+```
+Also you can add it as a dependecy in your `package.json` file.
+
+##Usage
+
+Refer to the [BeGlobal API page](https://www.beglobal.com/developers/) for more information about the API.
+
+###Initialize
+```js
+var BeGlobal = require('node-beglobal');
+
+//initialize the BeGlobal API
+var beglobal = new BeGlobal.BeGlobalAPI({
+  api_token: 'API_TOKEN'
+});
+```
+
+###Translation
+```js
+beglobal.translations.translate(
+  {text: 'hello', from: 'eng', to: 'fra'},
+  function(err, results) {
+    if (err) {
+      return console.log(err);
+    }
+
+    console.log(results);
+  }
+);
+```
+
+## License
 
 The MIT License (MIT)
 
