@@ -74,9 +74,9 @@ beglobal.languages.all(
 );
 ```
 
-###Languages
+###Projects
 
-`GET` all languages
+`GET` all projects
 
 ```js
 beglobal.projects.all(
