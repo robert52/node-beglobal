@@ -16,3 +16,9 @@ npm-debug.log
 
 ###project related
 lib/config.js
+
+###
+node_modules/
+
+###
+logs

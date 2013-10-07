@@ -6,20 +6,26 @@
     "api",
     "translation"
   ],
-  "version": "0.0.1",
-  "homepage": "",
-  "repository": "git@github.com:robert52/node-beglobal.git",
+  "version": "0.0.1-1",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:robert52/node-beglobal.git"
+  },
   "author": {
     "name": "Robert Onodi",
     "email": "robert.onodi89@gmail.com"
   },
-  "main": "./lib/beglobal.js",
-  "dependencies": {},
-  "engines": {
-    "node": ">= 0.10.0"
-  },
-  "licenses": [
+  "licenses": {
     "type": "MIT",
     "url": "http://github.com/robert52/node-beglobal/raw/master/LICENSE"
-  ]
+  },
+  "main": "./lib/beglobal.js",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "~1.8.2",
+    "chai": "~1.8.0"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  }
 }

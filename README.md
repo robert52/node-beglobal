@@ -39,6 +39,41 @@ beglobal.translations.translate(
 );
 ```
 
+###Languages
+```js
+beglobal.languages.all(
+  function(err, results) {
+    if (err) {
+      return console.log(err);
+    }
+
+    console.log(results);
+    // returning a list of language pairs
+    /*
+      [
+        {
+            "from": {
+                "id": "505037985fe01ac20407b7fb",
+                "code": "eng",
+                "name": "English",
+                "fullName": "English",
+                "rightToLeft": false
+            },
+            "to": {
+                "id": "505037985fe01ac20407b81f",
+                "code": "spa",
+                "name": "Spanish",
+                "fullName": "Spanish; Castilian",
+                "rightToLeft": false
+            }
+        },
+        ...
+      ]
+    */
+  }
+);
+```
+
 ## License
 
 The MIT License (MIT)
