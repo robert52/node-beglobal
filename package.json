@@ -11,10 +11,7 @@
     "type": "git",
     "url": "git@github.com:robert52/node-beglobal.git"
   },
-  "author": {
-    "name": "Robert Onodi",
-    "email": "robert.onodi89@gmail.com"
-  },
+  "author": "Robert Onodi <robert.onodi89@gmail.com>",
   "licenses": {
     "type": "MIT",
     "url": "http://github.com/robert52/node-beglobal/raw/master/LICENSE"
@@ -27,5 +24,17 @@
   },
   "engines": {
     "node": ">= 0.10.0"
-  }
+  },
+  "readmeFilename": "README.md",
+  "gitHead": "894ad0da6163931485b955a4bb343ae591578182",
+  "bugs": {
+    "url": "https://github.com/robert52/node-beglobal/issues"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha --ui bdd --recursive --reporter spec --timeout 10000 --slow 300"
+  },
+  "license": "MIT"
 }
