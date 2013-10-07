@@ -74,6 +74,290 @@ beglobal.languages.all(
 );
 ```
 
+###Languages
+
+`GET` all languages
+
+```js
+beglobal.projects.all(
+  function(err, results) {
+    if (err) {
+      return console.log(err);
+    }
+
+    console.log(results);
+    // returning a list of projects
+    /*
+    {
+        "totalCount" : 1,
+        "projects" : [
+           {
+              "type" : "translationProject",
+              "id" : "5176407e132b856177f4c87a",
+              "notificationCallbackURL" : "https://some.api.com/endpoint",
+              "autoAcceptProject" : false,
+              "links" : null,
+              "creationDate" : "2013-04-24 11:13:09",
+              "lastModifiedDate" : null,
+              "version" : null,
+              "apiKeyId" : null,
+              "accessControllList" : [
+
+             ],
+              "description" : null,
+              "projectName" : null,
+              "currentState" : null,
+              "stateHistory" : [
+                 {
+                    "state" : "temporary",
+                    "date" : "2013-04-24 11:13:09",
+                    "comment" : null,
+                    "paymentTimeStamp" : 0
+                },
+                 {
+                    "state" : "paid",
+                    "date" : "2013-04-24 11:21:09",
+                    "comment" : null,
+                    "paymentTimeStamp" : 0
+                },
+                 {
+                    "state" : "inProgress",
+                    "date" : "2013-04-24 12:13:09",
+                    "comment" : null,
+                    "paymentTimeStamp" : 0
+                }
+             ],
+              "price" : 200,
+              "preApprove" : false,
+              "jobs" : null,
+              "from" : "505037985fe01ac20407b7fb",
+              "to" : "301037985fe01ac20337b7fa",
+              "customerProfileId" : null,
+              "customerProfile" : {
+                 "type" : "customerProfile",
+                 "id" : "5176407e132b856177f4c87a",
+                 "links" : null,
+                 "creationDate" : "2013-04-24 11:13:09",
+                 "lastModifiedDate" : null,
+                 "version" : null,
+                 "apiKeyId" : null,
+                 "accessControllList" : [
+
+                ],
+                 "user" : {
+                    "id" : "5176407e132b856177f4c87a",
+                    "links" : null,
+                    "creationDate" : "2013-04-24 11:13:09",
+                    "lastModifiedDate" : null,
+                    "version" : null,
+                    "apiKeyId" : null,
+                    "accessControllList" : [
+
+                   ],
+                    "firstName" : "John",
+                    "lastName" : "Doe",
+                    "email" : "me@mydomain.com",
+                    "password" : "mysecret",
+                    "confirmed" : false,
+                    "active" : true,
+                    "browserInfo" : null,
+                    "temporary" : false,
+                    "test" : false,
+                    "paymentSources" : {
+                       "defaultIndex" : -1,
+                       "list" : [
+
+                      ],
+                       "defaultValue" : null,
+                       "nonDefaultValues" : null
+                   }
+                },
+                 "userId" : "5176407e132b856177f4c87a",
+                 "timezone" : null,
+                 "companyName" : null,
+                 "location" : null,
+                 "phoneNumber" : null,
+                 "webSite" : null
+             },
+              "quality" : "Q4",
+              "paymentAttemptId" : null,
+              "paymentTimestamp" : 0,
+              "wordCountDetails" : [
+                 {
+                    "fileId" : "120037985fe01ac20407b7fb",
+                    "xliffFileId" : null,
+                    "wordCount" : 12312,
+                    "fileName" : "poetry.doc",
+                    "size" : 12312,
+                    "failureCode" : null,
+                    "note" : null,
+                    "cost" : 200,
+                    "duration" : null,
+                    "formattedCost" : null,
+                    "formattedDuration" : null
+                },
+                 {
+                    "fileId" : "887037985fe01ac20407b7fb",
+                    "xliffFileId" : null,
+                    "wordCount" : 45312,
+                    "fileName" : "novel.txt",
+                    "size" : 11122,
+                    "failureCode" : null,
+                    "note" : null,
+                    "cost" : 200,
+                    "duration" : null,
+                    "formattedCost" : null,
+                    "formattedDuration" : null
+                }
+             ],
+              "sandbox" : false
+          }
+       ]
+    }
+    */
+  }
+);
+```
+
+`GET` a project by id
+
+```js
+beglobal.projects.get(
+  "5176407e132b856177f4c87a",
+  function(err, results) {
+    if (err) {
+      return console.log(err);
+    }
+
+    console.log(results);
+    // returning a list of language pairs
+    /*
+    {
+        "type" : "translationProject",
+        "id" : "5176407e132b856177f4c87a",
+        "notificationCallbackURL" : "https://some.api.com/endpoint",
+        "autoAcceptProject" : false,
+        "links" : null,
+        "creationDate" : "2013-04-24 11:13:09",
+        "lastModifiedDate" : null,
+        "version" : null,
+        "apiKeyId" : null,
+        "accessControllList" : [
+
+       ],
+        "description" : null,
+        "projectName" : null,
+        "currentState" : null,
+        "stateHistory" : [
+           {
+              "state" : "temporary",
+              "date" : "2013-04-24 11:13:09",
+              "comment" : null,
+              "paymentTimeStamp" : 0
+          },
+           {
+              "state" : "paid",
+              "date" : "2013-04-24 11:21:09",
+              "comment" : null,
+              "paymentTimeStamp" : 0
+          },
+           {
+              "state" : "inProgress",
+              "date" : "2013-04-24 12:13:09",
+              "comment" : null,
+              "paymentTimeStamp" : 0
+          }
+       ],
+        "price" : 200,
+        "preApprove" : false,
+        "jobs" : null,
+        "from" : "505037985fe01ac20407b7fb",
+        "to" : "301037985fe01ac20337b7fa",
+        "customerProfileId" : null,
+        "customerProfile" : {
+           "type" : "customerProfile",
+           "id" : "5176407e132b856177f4c87a",
+           "links" : null,
+           "creationDate" : "2013-04-24 11:13:09",
+           "lastModifiedDate" : null,
+           "version" : null,
+           "apiKeyId" : null,
+           "accessControllList" : [
+
+          ],
+           "user" : {
+              "id" : "5176407e132b856177f4c87a",
+              "links" : null,
+              "creationDate" : "2013-04-24 11:13:09",
+              "lastModifiedDate" : null,
+              "version" : null,
+              "apiKeyId" : null,
+              "accessControllList" : [
+
+             ],
+              "firstName" : "John",
+              "lastName" : "Doe",
+              "email" : "me@mydomain.com",
+              "password" : "mysecret",
+              "confirmed" : false,
+              "active" : true,
+              "browserInfo" : null,
+              "temporary" : false,
+              "test" : false,
+              "paymentSources" : {
+                 "defaultIndex" : -1,
+                 "list" : [
+
+                ],
+                 "defaultValue" : null,
+                 "nonDefaultValues" : null
+             }
+          },
+           "userId" : "5176407e132b856177f4c87a",
+           "timezone" : null,
+           "companyName" : null,
+           "location" : null,
+           "phoneNumber" : null,
+           "webSite" : null
+       },
+        "quality" : "Q4",
+        "paymentAttemptId" : null,
+        "paymentTimestamp" : 0,
+        "wordCountDetails" : [
+           {
+              "fileId" : "120037985fe01ac20407b7fb",
+              "xliffFileId" : null,
+              "wordCount" : 12312,
+              "fileName" : "poetry.doc",
+              "size" : 12312,
+              "failureCode" : null,
+              "note" : null,
+              "cost" : 200,
+              "duration" : null,
+              "formattedCost" : null,
+              "formattedDuration" : null
+          },
+           {
+              "fileId" : "887037985fe01ac20407b7fb",
+              "xliffFileId" : null,
+              "wordCount" : 45312,
+              "fileName" : "novel.txt",
+              "size" : 11122,
+              "failureCode" : null,
+              "note" : null,
+              "cost" : 200,
+              "duration" : null,
+              "formattedCost" : null,
+              "formattedDuration" : null
+          }
+       ],
+        "sandbox" : false
+    }
+    */
+  }
+);
+```
+
 ## License
 
 The MIT License (MIT)
