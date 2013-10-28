@@ -20,7 +20,7 @@ Refer to the [BeGlobal API page](https://www.beglobal.com/developers/) for more 
 var BeGlobal = require('node-beglobal');
 
 //initialize the BeGlobal API
-var beglobal = new BeGlobal.BeGlobalAPI({
+var beglobal = new BeGlobal.BeglobalAPI({
   api_token: 'API_TOKEN'
 });
 ```
